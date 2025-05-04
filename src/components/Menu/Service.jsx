@@ -10,29 +10,38 @@ const Service = () => {
             src="https://html.vikinglab.agency/ovro/assets/img/icons/sublogo1.svg"
             alt="Small-Logo"
           />
-          <span>My Service</span>
+          <span>My Services</span>
         </div>
         <div className="subtitle h1" data-aos="fade-left">
-          Elevating Brands
+          Building the Web
           <p>
-            Intuitive <span>Design</span>
+            With <span>Precision & Performance</span>
           </p>
         </div>
+
         <Card
-          title={`UI/UX Design`}
-          text={`Designing intuitive, user-focused interfaces that prioritize functionality and seamless navigation.`}
+          title={`Front-End Development`}
+          text={`Building responsive, interactive websites using React, JavaScript, HTML, and SCSS. I focus on clean code, accessibility, and performance.`}
         />
+
         <Card
-          title={`User Research & Prototyping`}
-          text={`Conducting in-depth user research and creating interactive prototypes to validate ideas and refine designs.`}
+          title={`UI Implementation`}
+          text={`Turning design files (Figma, Adobe XD) into functional front-end code with pixel-perfect precision and seamless animations.`}
         />
+
         <Card
-          title={`Responsive Web Design`}
-          text={`Crafting designs that adapt seamlessly across all devices, ensuring a consistent user experience.`}
+          title={`API Integration & Dynamic Data`}
+          text={`Connecting front-end apps to back-end APIs and databases to display real-time, dynamic content.`}
         />
+
         <Card
-          title={`Wireframing & Visual Design`}
-          text={`Creating detailed wireframes and visually stunning designs to bring ideas into focus.`}
+          title={`Version Control & Collaboration`}
+          text={`Using Git and GitHub for clean version control and effective collaboration with teams and clients.`}
+        />
+
+        <Card
+          title={`Learning Back-End Development`}
+          text={`Currently expanding into back-end technologies, including working with databases and creating full-stack applications.`}
         />
       </div>
     </>

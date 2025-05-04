@@ -155,9 +155,6 @@ const SidePanel = () => {
                 Hi, I’m Amir, a passionate Frontend Developer with a strong eye
                 for design and detail. I specialize in building responsive,
                 user-friendly interfaces that blend creativity with performance.
-                With a deep understanding of modern web technologies and a drive
-                to keep learning, I turn ideas into smooth, engaging digital
-                experiences.
               </div>
               <div className="social justify-content-around">
                 <a
