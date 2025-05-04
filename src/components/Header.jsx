@@ -115,6 +115,22 @@ const Header = (props) => {
     }
   };
 
+  useEffect(() => {
+    if (theme === "dark") {
+      document.body.classList.add("dark-theme");
+      document.body.classList.remove("light-theme");
+      props.settingImage(
+        "https://html.vikinglab.agency/ovro/assets/img/logo/logo2.png"
+      );
+    } else {
+      document.body.classList.add("light-theme");
+      document.body.classList.remove("dark-theme");
+      props.settingImage(
+        "https://html.vikinglab.agency/ovro/assets/img/logo/logo1.png"
+      );
+    }
+  }, [theme]);
+
   return (
     <div className="Head">
       <div className="container d-flex justify-content-center align-items-center">
