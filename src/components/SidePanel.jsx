@@ -24,7 +24,7 @@ const SidePanel = () => {
     <>
       <div className="Panel d-flex flex-row gap-4">
         <div className="left">
-          <ul className="list-unstyled d-flex flex-column gap-3 justify-content-center">
+          <ul className="list-unstyled d-flex flex-column gap-3 align-items-center h-100 justify-content-center">
             <li
               onClick={(e) => {
                 handleScroll("home", e.currentTarget);

@@ -4,7 +4,7 @@ import { HiMiniBars3BottomLeft } from "react-icons/hi2";
 import { FaMoon, FaRegSun } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { Offcanvas } from "react-bootstrap";
-import { BsTwitterX } from "react-icons/bs";
+import { BsGithub, BsTwitterX } from "react-icons/bs";
 import { FaFacebookF, FaInstagram } from "react-icons/fa6";
 import { GrLinkedin } from "react-icons/gr";
 import { CgDribbble } from "react-icons/cg";
@@ -32,44 +32,63 @@ function OffCanvasExample(props) {
         </Offcanvas.Header>
         <Offcanvas.Body className=" overflow-x-hidden">
           <ul className=" list-unstyled d-flex flex-column mb-5 gap-3 fs-4">
-           <li onClick={() => {handleScroll("home"); }}>
+           <li onClick={() => {handleScroll("home");handleClose() }}>
               <div className="expanded">Home</div>
            </li>
-           <li onClick={() => {handleScroll("about"); }}>
+           <li onClick={() => {handleScroll("about");handleClose() }}>
               <div className="expanded">About Us</div>
            </li>
-           <li onClick={() => {handleScroll("services"); }}>
+           <li onClick={() => {handleScroll("services");handleClose() }}>
               <div className="expanded">Our Service</div>
            </li>
-           <li onClick={() => {handleScroll("skills"); }}>
+           <li onClick={() => {handleScroll("skills");handleClose() }}>
               <div className="expanded">My Skill</div>
            </li>
-           <li onClick={() => {handleScroll("portfolio"); }}>
+           <li onClick={() => {handleScroll("portfolio");handleClose() }}>
               <div className="expanded">Portfolio</div>
            </li>
-           <li onClick={() => {handleScroll("testimonial"); }}>
+           <li onClick={() => {handleScroll("testimonial");handleClose() }}>
               <div className="expanded">Testimonial</div>
            </li>
-           <li onClick={() => {handleScroll("blog"); }}>
+           <li onClick={() => {handleScroll("blog");handleClose() }}>
               <div className="expanded">Our Blog</div>
            </li>
-           <li onClick={() => {handleScroll("contact"); }}>
+           <li onClick={() => {handleScroll("contact");handleClose() }}>
               <div className="expanded">Contact Me</div>
            </li>
           </ul>
-          <button className="btn btn-warning p-3 fs-4 rounded-5 fw-bold">Get In Touch Now</button>
+          <button onClick={() => {handleScroll("contact");handleClose()}} className="btn btn-warning p-3 fs-4 rounded-5 fw-bold">Get In Touch Now</button>
           <h3 className="mt-5">Social Links</h3>
           <div className="social justify-content-around">
-              <BsTwitterX className="social-icons" />
-              <FaInstagram className="social-icons" />
-              <FaFacebookF className="social-icons" />
-              <GrLinkedin className="social-icons" />
-              <CgDribbble className="social-icons" />
-          </div>
-          <h4 className="mt-4 w-100">SUBSCRIBE TO NEWSLETTER</h4>
-          <div className="subs position-relative">
-            <input className="input-off-canvas rounded-5 ps-4 w-100 fs-4" style={{height:"2.6em",backgroundColor:""}} type="email" placeholder="" />
-            <button className="btn btn-warning rounded-5 position-absolute h-75 top-50 translate-middle-y" style={{right:"10px"}}>SUBSCRIBE</button>
+              <a
+                                href="https://www.instagram.com/0nly_amirr/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <FaInstagram className="social-icons" />
+                              </a>
+                              <a
+                                href="https://x.com/AmirAsadli2613"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <FaFacebookF className="social-icons" />{" "}
+                                {/* You can replace with a Twitter icon */}
+                              </a>
+                              <a
+                                href="https://www.linkedin.com/in/amir-asadli-370899271/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <GrLinkedin className="social-icons" />
+                              </a>
+                              <a
+                                href="https://github.com/Amir606800"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <BsGithub className="social-icons" />
+                              </a>
           </div>
         </Offcanvas.Body>
       </Offcanvas>
@@ -89,26 +108,16 @@ const Header = (props) => {
     localStorage.setItem("theme", newTheme);
   };
 
-  useEffect(() => {
-    if (theme === "dark") {
-      document.body.classList.add("dark-theme");
-      document.body.classList.remove("light-theme");
-      props.settingImage(
-        "https://html.vikinglab.agency/ovro/assets/img/logo/logo2.png"
-      );
-    } else {
-      document.body.classList.add("light-theme");
-      document.body.classList.remove("dark-theme");
-      props.settingImage(
-        "https://html.vikinglab.agency/ovro/assets/img/logo/logo1.png"
-      );
+  const handleScroll = (secId, e) => {
+    const section = document.getElementById(secId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
     }
-  }, [theme]);
+  };
 
   return (
     <div className="Head">
-      <div className="container d-flex justify-content-between align-items-center">
-        <img src={props.image} className="logo" alt="logo-light" />
+      <div className="container d-flex justify-content-center align-items-center">
         <div className="right align-items-center d-flex gap-4">
           <div className="theme">
             <input
@@ -125,7 +134,7 @@ const Header = (props) => {
           </div>
           <div className="splitter d-none d-lg-block"></div>
           <div className="hire d-none d-md-block">
-            <button className="hire-btn rounded-5 d-flex align-items-center gap-1 btn btn-warning fw-bold">
+            <button onClick={()=>{handleScroll('contact')}} className="hire-btn rounded-5 d-flex align-items-center gap-1 btn btn-warning fw-bold">
               <span>HIRE ME</span> <IoIosMailOpen />
             </button>
           </div>
