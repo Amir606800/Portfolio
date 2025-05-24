@@ -26,7 +26,7 @@ const Portfolio = () => {
            <PortfolioCard img={'/GameSatis.png'} name={"GameSatis Website Clone"} link={"https://gamesatis.netlify.app/"} />
             <div className="row2 d-flex justify-content-center gap-4 align-items-center " >
                 <div className="col-lg-6"><PortfolioCard img={Website3} name={"SandBox Website Clone"} wid={"26em"} link={''} /></div>
-                <div className="col-lg-6"><PortfolioCard img={Website1} name={"Grogin eCommerce Site Clone"} wid={'26em'} link={"https://chimerical-crumble-d839e3.netlify.app/"} /></div>
+                <div className="col-lg-6"><PortfolioCard img={Website1} name={"Grogin eCommerce Site Clone"} wid={'26em'} link={"https://clonegrogin.netlify.app/"} /></div>
             </div>
            <PortfolioCard img={Website2} name={"Bookapp Website Clone"} link={"https://comforting-chaja-a05c4d.netlify.app/"} />
         </div>
